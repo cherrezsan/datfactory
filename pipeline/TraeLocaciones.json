@@ -59,7 +59,7 @@
 								"waitOnCompletion": true,
 								"parameters": {
 									"lugar": {
-										"value": "@item().location_type",
+										"value": "@item()",
 										"type": "Expression"
 									}
 								}
