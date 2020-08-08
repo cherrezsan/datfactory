@@ -1,0 +1,6 @@
+{
+	"name": "sackruntime",
+	"properties": {
+		"type": "SelfHosted"
+	}
+}
