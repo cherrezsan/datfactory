@@ -366,12 +366,8 @@
 			}
 		],
 		"parameters": {
-			"nameestudiante": {
-				"type": "array"
-			},
 			"lugar": {
-				"type": "string",
-				"defaultValue": "work"
+				"type": "string"
 			}
 		},
 		"annotations": []
