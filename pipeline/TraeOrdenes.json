@@ -1,5 +1,5 @@
 {
-	"name": "pipeline1",
+	"name": "TraeOrdenes",
 	"properties": {
 		"activities": [
 			{
@@ -364,7 +364,7 @@
 		],
 		"parameters": {
 			"nameestudiante": {
-				"type": "string",
+				"type": "array",
 				"defaultValue": "sack"
 			},
 			"lugar": {
