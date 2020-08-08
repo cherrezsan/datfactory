@@ -47,7 +47,13 @@
 						"referenceName": "TraeOrdenes",
 						"type": "PipelineReference"
 					},
-					"waitOnCompletion": true
+					"waitOnCompletion": true,
+					"parameters": {
+						"nameestudiante": {
+							"value": "array(@activity('TraeLocacionesData').output)",
+							"type": "Expression"
+						}
+					}
 				}
 			}
 		],
