@@ -364,8 +364,7 @@
 		],
 		"parameters": {
 			"nameestudiante": {
-				"type": "array",
-				"defaultValue": "sack"
+				"type": "array"
 			},
 			"lugar": {
 				"type": "string",
