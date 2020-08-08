@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobFSLocation",
 				"fileName": "Ordenes.csv",
-				"folderPath": "Orden/@{dataset().location_type}",
+				"folderPath": "Orden/@{dataset().lugar}",
 				"fileSystem": "aci-datasetssack"
 			},
 			"columnDelimiter": ",",
