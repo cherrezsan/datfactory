@@ -21,40 +21,34 @@
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
-					"enableStaging": false
+					"sink": {
+						"type": "ParquetSink",
+						"storeSettings": {
+							"type": "AzureBlobFSWriteSettings"
+						}
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
 				},
 				"inputs": [
 					{
 						"referenceName": "SqlServerTable1",
 						"type": "DatasetReference"
 					}
-				]
-			},
-			{
-				"name": "Execute Pipeline1",
-				"type": "ExecutePipeline",
-				"dependsOn": [
-					{
-						"activity": "TraeLocacionesData",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
 				],
-				"userProperties": [],
-				"typeProperties": {
-					"pipeline": {
-						"referenceName": "TraeOrdenes",
-						"type": "PipelineReference"
-					},
-					"waitOnCompletion": true,
-					"parameters": {
-						"nameestudiante": {
-							"value": "array(@activity('TraeLocacionesData').output)",
-							"type": "Expression"
-						}
+				"outputs": [
+					{
+						"referenceName": "Parquet1",
+						"type": "DatasetReference"
 					}
-				}
+				]
 			}
 		],
 		"annotations": []

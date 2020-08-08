@@ -1,0 +1,21 @@
+{
+	"name": "Parquet1",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sacklake",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "locaciones.parquet",
+				"folderPath": "cat",
+				"fileSystem": "aci-datasetssack"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
