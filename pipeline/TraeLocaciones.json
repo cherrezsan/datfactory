@@ -47,30 +47,21 @@
 					"isSequential": true,
 					"activities": [
 						{
-							"name": "Lookup1",
-							"type": "Lookup",
+							"name": "Execute Pipeline1",
+							"type": "ExecutePipeline",
 							"dependsOn": [],
-							"policy": {
-								"timeout": "7.00:00:00",
-								"retry": 0,
-								"retryIntervalInSeconds": 30,
-								"secureOutput": false,
-								"secureInput": false
-							},
 							"userProperties": [],
 							"typeProperties": {
-								"source": {
-									"type": "SqlServerSource",
-									"sqlReaderQuery": {
-										"value": "@select * \n  FROM [dbo].[orden]\nwhere location_type = item()",
-										"type": "Expression"
-									},
-									"queryTimeout": "02:00:00",
-									"partitionOption": "None"
+								"pipeline": {
+									"referenceName": "TraeOrdenes",
+									"type": "PipelineReference"
 								},
-								"dataset": {
-									"referenceName": "SqlServerTable1",
-									"type": "DatasetReference"
+								"waitOnCompletion": true,
+								"parameters": {
+									"lugar": {
+										"value": "@item()",
+										"type": "Expression"
+									}
 								}
 							}
 						}
