@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"source": {
 						"type": "SqlServerSource",
-						"sqlReaderQuery": "select distinct isnull(location_type, 'No Definido') as location_type\n  FROM [dbo].[orden]",
+						"sqlReaderQuery": "select distinct isnull(location_type, 'Vacio') as location_type\n  FROM [dbo].[orden]\n\n\n ",
 						"queryTimeout": "02:00:00",
 						"partitionOption": "None"
 					},
@@ -25,6 +25,41 @@
 						"referenceName": "SqlServerTable1",
 						"type": "DatasetReference"
 					}
+				}
+			},
+			{
+				"name": "Por cada locacion",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "TraeLocacionesData",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "array(@activity('TraeLocacionesData').output)",
+						"type": "Expression"
+					},
+					"isSequential": true,
+					"activities": [
+						{
+							"name": "TraeOrdenes",
+							"type": "ExecutePipeline",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"pipeline": {
+									"referenceName": "TraeOrdenes",
+									"type": "PipelineReference"
+								},
+								"waitOnCompletion": true
+							}
+						}
+					]
 				}
 			}
 		],
