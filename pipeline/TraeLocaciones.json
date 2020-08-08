@@ -44,22 +44,7 @@
 						"value": "array(@activity('TraeLocacionesData').output)",
 						"type": "Expression"
 					},
-					"isSequential": true,
-					"activities": [
-						{
-							"name": "TraeOrdenes",
-							"type": "ExecutePipeline",
-							"dependsOn": [],
-							"userProperties": [],
-							"typeProperties": {
-								"pipeline": {
-									"referenceName": "TraeOrdenes",
-									"type": "PipelineReference"
-								},
-								"waitOnCompletion": true
-							}
-						}
-					]
+					"isSequential": true
 				}
 			}
 		],
