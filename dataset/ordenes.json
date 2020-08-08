@@ -5,6 +5,11 @@
 			"referenceName": "sacklake",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"lugar": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {

@@ -368,7 +368,13 @@
 				"outputs": [
 					{
 						"referenceName": "ordenes",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"lugar": {
+								"value": "@pipeline().parameters.lugar",
+								"type": "Expression"
+							}
+						}
 					}
 				]
 			}
