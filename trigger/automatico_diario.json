@@ -1,0 +1,27 @@
+{
+	"name": "automatico_diario",
+	"properties": {
+		"annotations": [
+			"hola santiaguito"
+		],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "TraeLocaciones",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 1,
+				"startTime": "2020-08-09T21:22:00.000Z",
+				"endTime": "2020-08-17T21:22:00.000Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
