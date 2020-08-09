@@ -42,7 +42,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@array(activity('TraeLocacionesData').output)",
+						"value": "@array(activity('TraeLocacionesData').output.value)\n",
 						"type": "Expression"
 					},
 					"isSequential": true,
@@ -60,7 +60,7 @@
 								"waitOnCompletion": true,
 								"parameters": {
 									"lugar": {
-										"value": "@item()",
+										"value": "@item().location_type",
 										"type": "Expression"
 									}
 								}
@@ -70,6 +70,11 @@
 				}
 			}
 		],
+		"variables": {
+			"locations": {
+				"type": "Array"
+			}
+		},
 		"annotations": []
 	}
 }
