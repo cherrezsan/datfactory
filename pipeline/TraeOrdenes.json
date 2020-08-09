@@ -46,9 +46,9 @@
 									"physicalType": "bigint"
 								},
 								"sink": {
-									"name": "akeed_order_id",
 									"type": "Int64",
-									"physicalType": "bigint"
+									"physicalType": "bigint",
+									"ordinal": 1
 								}
 							},
 							{
@@ -58,9 +58,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "customer_id",
 									"type": "String",
-									"physicalType": "varchar"
+									"physicalType": "varchar",
+									"ordinal": 2
 								}
 							},
 							{
@@ -70,9 +70,9 @@
 									"physicalType": "int"
 								},
 								"sink": {
-									"name": "item_count",
 									"type": "Int32",
-									"physicalType": "int"
+									"physicalType": "int",
+									"ordinal": 3
 								}
 							},
 							{
@@ -82,9 +82,9 @@
 									"physicalType": "decimal"
 								},
 								"sink": {
-									"name": "grand_total",
 									"type": "Decimal",
-									"physicalType": "decimal"
+									"physicalType": "decimal",
+									"ordinal": 4
 								}
 							},
 							{
@@ -94,9 +94,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "payment_mode",
 									"type": "String",
-									"physicalType": "varchar"
+									"physicalType": "varchar",
+									"ordinal": 5
 								}
 							},
 							{
@@ -106,9 +106,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "promo_code",
 									"type": "String",
-									"physicalType": "varchar"
+									"physicalType": "varchar",
+									"ordinal": 6
 								}
 							},
 							{
@@ -118,9 +118,9 @@
 									"physicalType": "decimal"
 								},
 								"sink": {
-									"name": "vendor_discount_amount",
 									"type": "Decimal",
-									"physicalType": "decimal"
+									"physicalType": "decimal",
+									"ordinal": 7
 								}
 							},
 							{
@@ -130,9 +130,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "promo_code_discount_percentage",
 									"type": "String",
-									"physicalType": "varchar"
+									"physicalType": "varchar",
+									"ordinal": 8
 								}
 							},
 							{
@@ -142,9 +142,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "is_favorite",
 									"type": "String",
-									"physicalType": "varchar"
+									"physicalType": "varchar",
+									"ordinal": 9
 								}
 							},
 							{
@@ -154,9 +154,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "is_rated",
 									"type": "String",
-									"physicalType": "varchar"
+									"physicalType": "varchar",
+									"ordinal": 10
 								}
 							},
 							{
@@ -166,9 +166,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "vendor_rating",
 									"type": "String",
-									"physicalType": "varchar"
+									"physicalType": "varchar",
+									"ordinal": 11
 								}
 							},
 							{
@@ -178,9 +178,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "driver_rating",
 									"type": "String",
-									"physicalType": "varchar"
+									"physicalType": "varchar",
+									"ordinal": 12
 								}
 							},
 							{
@@ -190,9 +190,9 @@
 									"physicalType": "decimal"
 								},
 								"sink": {
-									"name": "deliverydistance",
 									"type": "Decimal",
-									"physicalType": "decimal"
+									"physicalType": "decimal",
+									"ordinal": 13
 								}
 							},
 							{
@@ -202,9 +202,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "preparationtime",
 									"type": "String",
-									"physicalType": "varchar"
+									"physicalType": "varchar",
+									"ordinal": 14
 								}
 							},
 							{
@@ -214,9 +214,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "delivery_time",
 									"type": "String",
-									"physicalType": "varchar"
+									"physicalType": "varchar",
+									"ordinal": 15
 								}
 							},
 							{
@@ -226,9 +226,9 @@
 									"physicalType": "datetime"
 								},
 								"sink": {
-									"name": "order_accepted_time",
 									"type": "DateTime",
-									"physicalType": "datetime"
+									"physicalType": "datetime",
+									"ordinal": 16
 								}
 							},
 							{
@@ -238,9 +238,9 @@
 									"physicalType": "datetime"
 								},
 								"sink": {
-									"name": "driver_accepted_time",
 									"type": "DateTime",
-									"physicalType": "datetime"
+									"physicalType": "datetime",
+									"ordinal": 17
 								}
 							},
 							{
@@ -250,9 +250,9 @@
 									"physicalType": "datetime"
 								},
 								"sink": {
-									"name": "ready_for_pickup_time",
 									"type": "DateTime",
-									"physicalType": "datetime"
+									"physicalType": "datetime",
+									"ordinal": 18
 								}
 							},
 							{
@@ -262,9 +262,9 @@
 									"physicalType": "datetime"
 								},
 								"sink": {
-									"name": "picked_up_time",
 									"type": "DateTime",
-									"physicalType": "datetime"
+									"physicalType": "datetime",
+									"ordinal": 19
 								}
 							},
 							{
@@ -274,9 +274,9 @@
 									"physicalType": "datetime"
 								},
 								"sink": {
-									"name": "delivered_time",
 									"type": "DateTime",
-									"physicalType": "datetime"
+									"physicalType": "datetime",
+									"ordinal": 20
 								}
 							},
 							{
@@ -286,9 +286,9 @@
 									"physicalType": "datetime"
 								},
 								"sink": {
-									"name": "delivery_date",
 									"type": "DateTime",
-									"physicalType": "datetime"
+									"physicalType": "datetime",
+									"ordinal": 21
 								}
 							},
 							{
@@ -298,9 +298,9 @@
 									"physicalType": "int"
 								},
 								"sink": {
-									"name": "vendor_id",
 									"type": "Int32",
-									"physicalType": "int"
+									"physicalType": "int",
+									"ordinal": 22
 								}
 							},
 							{
@@ -310,9 +310,9 @@
 									"physicalType": "datetime"
 								},
 								"sink": {
-									"name": "created_at",
 									"type": "DateTime",
-									"physicalType": "datetime"
+									"physicalType": "datetime",
+									"ordinal": 23
 								}
 							},
 							{
@@ -322,9 +322,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "location_number",
 									"type": "String",
-									"physicalType": "varchar"
+									"physicalType": "varchar",
+									"ordinal": 24
 								}
 							},
 							{
@@ -334,9 +334,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "location_type",
 									"type": "String",
-									"physicalType": "varchar"
+									"physicalType": "varchar",
+									"ordinal": 25
 								}
 							},
 							{
@@ -346,9 +346,9 @@
 									"physicalType": "varchar"
 								},
 								"sink": {
-									"name": "cid_x_loc_num_x_vendor",
 									"type": "String",
-									"physicalType": "varchar"
+									"physicalType": "varchar",
+									"ordinal": 26
 								}
 							}
 						],
